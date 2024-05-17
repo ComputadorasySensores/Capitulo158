@@ -24,6 +24,10 @@ nano ~/frigate-nvr/docker-compose.yml
 
 En archivo archivo docker-compose.yml cambia tu home y el password
 
+cd ~/frigate-nvr
+
+docker compose up -d
+
 # Paso a paso
 
 La explicación completa la podrás ver en el siguiente video de Youtube:
