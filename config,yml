@@ -1,0 +1,49 @@
+mqtt:
+  enabled: false
+
+ffmpeg:
+  hwaccel_args: preset-rpi-64-h264 #Enable Hardware Acceleration
+  input_args: preset-http-mjpeg-generic
+
+birdseye:
+  enabled: true
+  mode: continuous
+
+objects:
+  track:
+  - person
+
+cameras:
+  escalera:
+    ffmpeg:
+      inputs:
+      - path: http://192.168.0.47:8081   #The Stream you want to monitor
+        roles:
+        - detect
+        - record
+    detect:
+      enabled: true # Detection is disabled
+      width: 1280 # The Cameras resolution
+      height: 720 # The Cameras resolution
+    record:
+      enabled: True
+      retain:
+        days: 7
+        mode: motion
+
+  garage:
+    ffmpeg:
+      inputs:
+      - path: http://192.168.0.48:8081     #The Stream you want to monitor
+        roles:
+        - detect
+        - record
+    detect:
+      enabled: true   # Detection is disabled
+      width: 1280   # The Cameras resolution
+      height: 720   # The Cameras resolution
+    record:
+      enabled: True
+      retain:
+        days: 7
+        mode: motion
