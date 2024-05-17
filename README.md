@@ -22,7 +22,7 @@ Ver archivo config.yml
 
 nano ~/frigate-nvr/docker-compose.yml
 
-En archivo archivo docker-compose.yml cambia tu home y el password
+En archivo docker-compose.yml cambia tu home y el password
 
 cd ~/frigate-nvr
 
